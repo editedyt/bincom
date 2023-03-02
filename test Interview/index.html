@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav class="flex">
+            <div class="logo">
+                BIncom Dev Center
+            </div>
+            
+        </nav>
+    </header>
+    <main>
+        <ul class="flex ul">
+            <li class="pu">
+                <a href="#" class="pu">Individual polling unit</a>
+            </li>
+
+            <li class="pur">
+                <a href="#" class="pur">polling unit result</a>
+            </li>
+
+            <li class="ar">
+                <a href="#" class="ar">Add new poll result</a>
+            </li>
+        </ul>
+
+        <section class="polling-unit pu">
+            <div class="scroll tbcontainer first">
+                <p class="cap">
+                    Result For an Individual Polling Unit where polling unit unique id = 19;
+                </p>
+                <table class="table">   
+                    <thead>
+                        <tr class="table_r">
+                            <th class="table_h" scope="col">
+                                Party
+                            </th>
+                            <th class="table_h" scope="col">
+                                Party score
+                            </th>
+                            <th class="table_h" scope="col">
+                                Entered by User
+                            </th>
+                            <th class="table_h" scope="col">
+                                Date Entered
+                            </th>
+                            <th class="table_h" scope="col">
+                                Ip_adddres
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+    
+                </table>
+            </div>
+        </section>
+            
+        <section class="polling-unit-result pur hide">
+            <p class="cap">Select Local Government Area to display it's Polling Result</p>
+            <form action="" id="form">
+                <select name="select" id="select">
+                    <option value="1" disabled selected>Select LGA</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="scroll tbcontainer second">
+                <table class="table pu-result">   
+                    <p class="cap">
+                        Result of Polling Unit Form  Individual Local Government Area
+                    </p>
+                    <thead>
+                        <tr class="table_r">
+                            <th class="table_h" scope="col">
+                                Party
+                            </th>
+                            <th class="table_h" scope="col">
+                                Total Party Score
+                            </th>
+                            <th class="table_h" scope="col">
+                                Local Government Area
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                    <tbody class="hide sec">
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+        </section>
+
+        <section class="add-result ar hide">
+            <form action="" id="newRes">
+                <div class="msg_container"></div>
+                <p class="cap">
+                    Enter new results;
+                </p>
+                <div class="form-group">
+                    <label for="result_id">Result Id:</label>
+                    <input type="number" name="result_id" id="result_id" required>
+                </div>
+                <div class="form-group">
+                    <label for="polling_unit_uniqueId">Polling Unit Unique Id:</label>
+                    <input type="number" name="polling_unit_uniqueId" id="polling_unit_uniqueId" required>
+                </div>
+                <div class="form-group">
+                    <label for="party">Party:</label>
+                    <input type="text" name="party" id="party" required>
+                </div>
+                <div class="form-group">
+                    <label for="party_score">Party Score:</label>
+                    <input type="number" name="party_score" id="party_score" required>
+                </div>
+                <div class="form-group">
+                    <label for="entered_by">Entered By:</label>
+                    <input type="text" name="entered_by" id="entered_by">
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
